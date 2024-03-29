@@ -1,0 +1,81 @@
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+main section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .main-section {
+  gap: 8px;
+  flex-grow: 1;
+  background-color: #EEEEEE;
+}
+main .main-section img {
+  border-radius: 30px;
+  border-color: #FD7401;
+  border-width: 1px;
+  border-style: solid;
+}
+main .form-section {
+  flex-grow: 0.3;
+  padding: 0 35px;
+}
+main .form-section img {
+  margin-bottom: 30px;
+}
+main .form-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+main .form-section .btn-wrapper {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+}
+main .form-section .btn-wrapper .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  font-size: 14px;
+  color: #C2C2C2;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+main .form-section .btn-wrapper .divider div {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #C2C2C2;
+}
+main .form-section .btn-wrapper button {
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+main .form-section .btn-wrapper button.btn-primary {
+  background-color: #FD7401;
+  color: white;
+  box-shadow: 0px 8px 12px rgba(253, 116, 1, 0.3000000119);
+}
+main .form-section .btn-wrapper button.btn-secondary {
+  border: 1px solid #FD7401;
+  color: #FD7401;
+}/*# sourceMappingURL=default-login-layout.component.css.map */
