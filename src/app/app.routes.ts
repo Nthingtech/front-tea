@@ -14,7 +14,7 @@ export const routes: Routes = [
     component: SignupComponent
   },
   {
-    path: "",
+    path: "home",
     component: HomeComponent
   }
 ];
