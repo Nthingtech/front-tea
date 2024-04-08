@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @Component({
@@ -8,7 +7,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   standalone: true,
   imports: [
     RouterOutlet,
-    MatToolbarModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
