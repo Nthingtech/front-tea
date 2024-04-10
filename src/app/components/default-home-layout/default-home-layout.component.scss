@@ -1,1 +1,30 @@
-@import "/src/styles/variables.scss";
+@import "../../../styles/variables.scss";
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background-color: $primary-color;
+
+  section {
+    height: auto;
+    text-align: center;
+
+  }
+
+  h1 {
+    color: white;
+    padding-top: 10px;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background-color: $primary-color;
+  }
+}
