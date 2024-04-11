@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 
 @Component({
@@ -11,5 +11,7 @@ import { HeaderComponent } from '../header/header.component';
   styleUrl: './default-home-layout.component.scss'
 })
 export class DefaultHomeLayoutComponent {
+  @Input() title: string = "";
+  @Input() loginBtnTxt: string = "";
 
 }

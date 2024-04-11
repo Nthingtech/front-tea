@@ -5,8 +5,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: $back-color;
   height: 100%;
+  background-color: $back-color;
 
   section {
     display: flex;
@@ -14,13 +14,21 @@ main {
     align-items: center;
     justify-content: center;
     height: 100%;
-    background-color: $back-color;
+
+  }
+
+  h1 {
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 25px;
   }
 
   .main-section {
-
     gap: 8px;
-
     flex-grow: 1;
   }
 
@@ -29,6 +37,19 @@ main {
   }
 
   .button-section{
-    flex-grow: 0.3;
+    flex-grow: 0.4;
+    padding: 0 35px;
+  }
+
+  button {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background-color: $primary-color;
+    border: none;
+    padding: 12px 24px;
+    box-shadow: 0px 0px 20px rgba($color: #5398ff54, $alpha: 1.0);
   }
 }
