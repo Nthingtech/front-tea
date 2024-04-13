@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { DefaultHomeLayoutComponent } from '../../components/default-home-layout/default-home-layout.component';
+import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -14,4 +16,9 @@ import { DefaultHomeLayoutComponent } from '../../components/default-home-layout
 })
 export class HomeComponent {
 
+  constructor(private router: Router){}
+
+  navigate(){
+    this.router.navigate(["login"])
+  }
 }

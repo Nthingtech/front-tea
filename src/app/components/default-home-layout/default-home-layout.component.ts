@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 
 @Component({
@@ -13,5 +13,10 @@ import { HeaderComponent } from '../header/header.component';
 export class DefaultHomeLayoutComponent {
   @Input() title: string = "";
   @Input() loginBtnTxt: string = "";
+  @Output("navigate") onNavigate = new EventEmitter();
+
+  navigate(){
+    this.onNavigate.emit();
+  }
 
 }

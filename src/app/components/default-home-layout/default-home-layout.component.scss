@@ -33,7 +33,7 @@ main {
   }
 
   .img{
-    border-radius: 200px;
+
   }
 
   .button-section{
@@ -51,5 +51,6 @@ main {
     border: none;
     padding: 12px 24px;
     box-shadow: 0px 0px 20px rgba($color: #5398ff54, $alpha: 1.0);
+    cursor: pointer;
   }
 }
