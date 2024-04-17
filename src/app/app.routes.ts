@@ -3,6 +3,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { Component } from '@angular/core';
 import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ReportComponent } from './pages/report/report.component';
 
 export const routes: Routes = [
   {
@@ -16,5 +17,9 @@ export const routes: Routes = [
   {
     path: "",
     component: HomeComponent
+  },
+  {
+    path: "record",
+    component: ReportComponent
   }
 ];
