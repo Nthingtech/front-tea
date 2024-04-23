@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReportComponent } from './pages/report/report.component';
+import { BehaviorsComponent } from './pages/behaviors/behaviors.component';
 
 export const routes: Routes = [
   {
@@ -21,5 +22,9 @@ export const routes: Routes = [
   {
     path: "report",
     component: ReportComponent
+  },
+  {
+    path: "behaviors",
+    component: BehaviorsComponent
   }
 ];

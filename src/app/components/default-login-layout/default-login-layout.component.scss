@@ -19,13 +19,9 @@ main {
     gap: 8px;
 
     flex-grow: 1;
-    background-color: $gray-bg;
+    background-color: white;
 
     img {
-      box-shadow:0px 0px 20px rgba(68, 1, 253, 0.3);
-      border-radius: 50%;
-      object-fit: cover;
-      border: 6px;
     }
   }
 
@@ -34,7 +30,7 @@ main {
     padding: 0 35px;
 
     img {
-      margin-bottom: 30px;
+      margin-bottom: 1px;
     }
 
     h2 {

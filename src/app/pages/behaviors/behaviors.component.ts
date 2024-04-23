@@ -1,17 +1,14 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-report',
+  selector: 'app-behaviors',
   standalone: true,
-  imports: [
-    ReactiveFormsModule
-  ],
-  templateUrl: './report.component.html',
-  styleUrl: './report.component.scss'
+  imports: [],
+  templateUrl: './behaviors.component.html',
+  styleUrl: './behaviors.component.scss'
 })
-export class ReportComponent {
+export class BehaviorsComponent {
 
   @Output("navigateDefault") onNavigate = new EventEmitter();
 
@@ -24,6 +21,4 @@ export class ReportComponent {
   navigate(){
     this.router.navigate([""])
   }
-
-
 }
