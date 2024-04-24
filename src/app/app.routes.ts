@@ -5,6 +5,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReportComponent } from './pages/report/report.component';
 import { BehaviorsComponent } from './pages/behaviors/behaviors.component';
+import { AboutComponent } from './pages/about/about.component';
 
 export const routes: Routes = [
   {
@@ -26,5 +27,9 @@ export const routes: Routes = [
   {
     path: "behaviors",
     component: BehaviorsComponent
+  },
+  {
+    path: "about",
+    component: AboutComponent
   }
 ];

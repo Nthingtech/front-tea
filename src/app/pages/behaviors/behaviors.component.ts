@@ -21,4 +21,8 @@ export class BehaviorsComponent {
   navigate(){
     this.router.navigate([""])
   }
+
+  navigateReport(){
+    this.router.navigate(["report"])
+  }
 }
