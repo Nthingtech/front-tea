@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -9,4 +10,17 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  constructor(private router: Router){}
+
+  navigateHome(){
+    this.router.navigate([""])
+  }
+
+  navigateSignup(){
+    this.router.navigate(["signup"])
+  }
+
+  navigateLogin(){
+    this.router.navigate(["login"])
+  }
 }

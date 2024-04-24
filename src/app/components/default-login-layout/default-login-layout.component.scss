@@ -99,4 +99,32 @@ main {
 
 }
 
+.logobar{
+	text-align: center;
+	background-color: $primary-color;
+	padding-top: 1rem;
+}
+
+.custom-text {
+  color: #fff;
+  font-size: 24px;
+}
+
+.service-icon {
+  background-color: #fff;
+  color: #fc4e22;
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  line-height: 7.5rem;
+  font-size: 2.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 

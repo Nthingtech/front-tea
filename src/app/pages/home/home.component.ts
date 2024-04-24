@@ -21,4 +21,8 @@ export class HomeComponent {
   navigate(){
     this.router.navigate(["login"])
   }
+
+  navigateAbout(){
+    this.router.navigate(["about"])
+  }
 }

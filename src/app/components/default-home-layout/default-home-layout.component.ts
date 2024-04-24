@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-default-home-layout',
@@ -15,8 +16,14 @@ export class DefaultHomeLayoutComponent {
   @Input() loginBtnTxt: string = "";
   @Output("navigate") onNavigate = new EventEmitter();
 
+  constructor(private router: Router){}
+
   navigate(){
     this.onNavigate.emit();
+  }
+
+  navigateAbout(){
+    this.router.navigate(["about"])
   }
 
 }

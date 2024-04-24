@@ -25,4 +25,8 @@ export class ReportComponent {
     this.router.navigate([""])
   }
 
+  navigateAbout(){
+    this.router.navigate(["about"])
+  }
+
 }

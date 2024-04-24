@@ -32,12 +32,12 @@ main {
     flex-grow: 1;
   }
 
-  .img{
-
+  img{
+    height: 450px;
   }
 
   .button-section{
-    flex-grow: 0.4;
+    flex-grow: 0.3;
     padding: 0 35px;
   }
 
@@ -53,4 +53,26 @@ main {
     box-shadow: 0px 0px 20px rgba($color: #5398ff54, $alpha: 1.0);
     cursor: pointer;
   }
+}
+
+.logobar{
+	text-align: center;
+	background-color: $primary-color;
+	padding-top: 1rem;
+}
+
+.custom-text {
+  color: #fff;
+  font-size: 24px;
+}
+
+.service-icon {
+  background-color: #fff;
+  color: #fc4e22;
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  line-height: 7.5rem;
+  font-size: 2.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
