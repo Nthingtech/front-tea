@@ -1,0 +1,60 @@
+<header class="logobar">
+    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+      <div class="d-flex align-items-center">
+        <span class="service-icon rounded-circle mx-auto mb-3 text-left dropdown-toggle" type="button" data-bs-toggle="dropdown"
+         aria-expanded="false" >
+          <img width="81,5" height="81,5" src="assets/svg/logoheart1.svg"></span>
+        <span class="ml-2 custom-text">Time4TEA</span>
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" type="button" (click)="navigateAbout()">Sobre o TEA</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center text-child">Crianças</h1>
+    </div>
+  </div>
+  <hr>
+  <div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col-auto">
+        dd/mm/yyyy
+      </div>
+      <div class="col-auto">
+        NOME Lorem ipsum dolor
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" id="newChild" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+  </svg>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Criança</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

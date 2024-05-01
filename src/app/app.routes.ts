@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ReportComponent } from './pages/report/report.component';
 import { BehaviorsComponent } from './pages/behaviors/behaviors.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ChildListComponent } from './components/child-list/child-list.component';
 
 export const routes: Routes = [
   {
@@ -31,5 +32,9 @@ export const routes: Routes = [
   {
     path: "about",
     component: AboutComponent
+  },
+  {
+    path: "childlist",
+    component: ChildListComponent
   }
 ];

@@ -1,12 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-default-home-layout',
   standalone: true,
   imports: [
-    HeaderComponent
   ],
   templateUrl: './default-home-layout.component.html',
   styleUrl: './default-home-layout.component.scss'

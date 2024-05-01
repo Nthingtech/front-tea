@@ -3,7 +3,8 @@
     <div class="d-flex align-items-center">
       <span class="service-icon rounded-circle mx-auto mb-3 text-left dropdown-toggle" type="button" data-bs-toggle="dropdown"
        aria-expanded="false" >
-        <img width="81,5" height="81,5" src="assets/svg/logoheart1.svg"></span>
+        <img width="81,5" height="81,5" src="assets/svg/logoheart1.svg">
+      </span>
       <span class="ml-2 custom-text">Relatório Diário</span>
       <ul class="dropdown-menu">
         <li><button class="dropdown-item" type="button" (click)="navigate()">Início</button></li>
@@ -35,39 +36,59 @@
     </div>
 
     <br>
-
     <form action="recordData" method="post">
-              <div class="form-group">
+          <div class="form-group">
             <div class="row">
                 <div class="col-md-6">
                     <h2>Como foi o dia?</h2>
-
                     <label class="required">Data:</label>
                     <input class="form-control input-date" type="date" name="date" id="date" value="">
-
                     <br>
-
                     <label>Nome:</label>
-              <select class="form-control custom-name" id="nameOfChild" name="nameOfChild">
-                <option value="" disabled="" selected="">Nome da Criança</option>
-              </select>
+                    <select class="form-control custom-name" id="nameOfChild" name="nameOfChild">
+                    <option value="" disabled="" selected="">Nome da Criança</option>
+                    </select>
+                    <br><br><br>
+                    <div class="row-cols-3" style="text-align:end;">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Cadastrar Criança
+                      </button>
 
-
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro Criança</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              ...
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                              <button type="button" class="btn btn-primary">Salvar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <br>
-
                     <h2>Avaliação do dia</h2>
-              <div class="form-group">
-                  <label style="font-size: 1.2em;">Como você avaliaria o nível de dificuldade do dia para a criança?</label><br>
-                  <br>
-                  <small style="font-size: 0.96em;">Numa escala de 1 a 3, onde 1 indica um dia fácil, 2 moderado e 3 desafiador.</small><br>
-                  <input type="range" class="range-slider custom-range" min="0" max="3" step="1" oninput="document.getElementById('rangeval').textContent = this.value" required="" id="dayClassification" name="dayClassification" value="0">
-                  <span id="rangeval">0</span>
-              </div>
-                </div>
 
+                  <div class="form-group">
+                    <label style="font-size: 1.2em;">Como você avaliaria o nível de dificuldade do dia para a criança?</label><br>
+                    <br>
+                    <small style="font-size: 0.96em;">Numa escala de 1 a 3, onde 1 indica um dia fácil, 2 moderado e 3 desafiador.</small><br>
+                    <input type="range" class="range-slider custom-range" min="1" max="3" step="1" oninput="document.getElementById('rangeval').textContent = this.value" required="" id="dayClassification" name="dayClassification" value="1">
+                    <span id="rangeval">1</span>
+                  </div>
+                </div>
                 <div class="col-md-6" style="text-align: right;">
                     <img src="assets/img/photokid.jpg" class="img-fluid" style="max-width: 60%; height: auto;">
                 </div>
+
             </div>
         </div>
 
@@ -75,7 +96,7 @@
 
               <h2>Comportamento</h2>
               <label style="font-size: 1.2em;">Como você avaliaria a intensidade dos comportamentos da criança ao longo do dia?</label><br>
-              <small style="font-size: 0.96em;">Utilizando uma escala de 0 a 2, onde 0 representa comportamentos leves e 2 significa comportamentos intensos.</small><br>
+              <small style="font-size: 0.96em;">Utilizando uma escala de 1 a 3, onde 1 representa comportamentos leves e 3 significa comportamentos intensos.</small><br>
               <div class="container mt-3">
                   <div class="row">
 
@@ -84,7 +105,7 @@
                 <div class="d-flex justify-content-between">
                     <label>Interação social</label>
                 </div>
-                    <input type="range" name="socialInteraction" class="range-slider" min="0" max="2" step="1" oninput="document.getElementById('slider-value').textContent = this.value" required="" id="behaviourSocialInteraction" value="0">
+                    <input type="range" name="socialInteraction" class="range-slider" min="0" max="3" step="1" oninput="document.getElementById('slider-value').textContent = this.value" required="" id="behaviourSocialInteraction" value="0">
                 <span id="slider-value">0</span>
             </div>
 
@@ -94,7 +115,7 @@
                 <div class="d-flex justify-content-between">
                     <label>Ansiedade</label>
                 </div>
-                    <input type="range" name="anxiety" class="range-slider" min="0" max="2" step="1" oninput="document.getElementById('slider-value-anxiety').textContent = this.value" required="" id="behaviourAnxiety" value="0">
+                    <input type="range" name="anxiety" class="range-slider" min="0" max="3" step="1" oninput="document.getElementById('slider-value-anxiety').textContent = this.value" required="" id="behaviourAnxiety" value="0">
                 <span id="slider-value-anxiety">0</span>
             </div>
 
@@ -103,9 +124,9 @@
                 <div class="d-flex justify-content-between">
                     <label>Agradável</label>
                 </div>
-                    <input type="range" name="pleasant" class="range-slider" min="0" max="2" step="1" oninput="document.getElementById('slider-value-pleasant').textContent = this.value" required="" id="behaviourPleasant" value="0">
+                    <input type="range" name="pleasant" class="range-slider" min="0" max="3" step="1" oninput="document.getElementById('slider-value-pleasant').textContent = this.value" required="" id="behaviourPleasant" value="0">
 
-                <span id="slider-value-pleasant"></span>
+                <span id="slider-value-pleasant">0</span>
              </div>
 
              <!-- Behavior 4: Impatience -->
@@ -113,9 +134,9 @@
                  <div class="d-flex justify-content-between">
                      <label>Impaciência</label>
                  </div>
-                     <input type="range" name="impatience" class="range-slider" min="0" max="2" step="1" oninput="document.getElementById('slider-value-impatience').textContent = this.value" required="" id="behaviourImpatience" value="0">
+                     <input type="range" name="impatience" class="range-slider" min="0" max="3" step="1" oninput="document.getElementById('slider-value-impatience').textContent = this.value" required="" id="behaviourImpatience" value="0">
 
-                 <span id="slider-value-impatience"></span>
+                 <span id="slider-value-impatience">0</span>
              </div>
 
              <!-- Behavior 5: Aggressiveness -->
@@ -123,8 +144,8 @@
                  <div class="d-flex justify-content-between">
                      <label>Agressividade</label>
                  </div>
-                     <input type="range" name="aggressiveness" class="range-slider" min="0" max="2" step="1" oninput="document.getElementById('slider-value-aggressiveness').textContent = this.value" required="" id="behaviourAggressiveness" value="0">
-                 <span id="slider-value-aggressiveness"></span>
+                     <input type="range" name="aggressiveness" class="range-slider" min="0" max="3" step="1" oninput="document.getElementById('slider-value-aggressiveness').textContent = this.value" required="" id="behaviourAggressiveness" value="0">
+                 <span id="slider-value-aggressiveness">0</span>
             </div>
 
             <!-- Behavior 6: Friendliness -->
@@ -132,8 +153,8 @@
                 <div class="d-flex justify-content-between">
                     <label>Simpatia</label>
                 </div>
-                    <input type="range" name="friendliness" class="range-slider" min="0" max="2" step="1" oninput="document.getElementById('slider-value-friendliness').textContent = this.value" required="" id="behaviourFriendliness" value="0">
-                <span id="slider-value-friendliness"></span>
+                    <input type="range" name="friendliness" class="range-slider" min="0" max="3" step="1" oninput="document.getElementById('slider-value-friendliness').textContent = this.value" required="" id="behaviourFriendliness" value="0">
+                <span id="slider-value-friendliness">0</span>
           </div>
 
           <!-- Behavior 7: Communication -->
@@ -141,8 +162,8 @@
               <div class="d-flex justify-content-between">
                   <label>Comunicação</label>
               </div>
-                  <input type="range" name="communication" class="range-slider" min="0" max="2" step="1" oninput="document.getElementById('slider-value-communication').textContent = this.value" required="" id="behaviourCommunication" value="0">
-              <span id="slider-value-communication"></span>
+                  <input type="range" name="communication" class="range-slider" min="0" max="3" step="1" oninput="document.getElementById('slider-value-communication').textContent = this.value" required="" id="behaviourCommunication" value="0">
+              <span id="slider-value-communication">0</span>
           </div>
 
           <!-- Behavior 8: Concentration -->
@@ -150,8 +171,8 @@
               <div class="d-flex justify-content-between">
                   <label>Concentração</label>
               </div>
-                  <input type="range" name="concentration" class="range-slider" min="0" max="2" step="1" id="behaviourConcentration" value="0">
-              <span id="slider-value-concentration"></span>
+                  <input type="range" name="concentration" class="range-slider" min="0" max="3" step="1" id="behaviourConcentration" value="0">
+              <span id="slider-value-concentration">0</span>
           </div>
                   </div>
               </div>
