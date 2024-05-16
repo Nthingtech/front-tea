@@ -19,13 +19,13 @@
     </div>
   </div>
   <hr>
-  <div class="container text-center">
+  <div class="container text-center" *ngFor="let ITEM of childList">
     <div class="row align-items-start">
       <div class="col-auto">
-        dd/mm/yyyy
+        {{ ITEM.birthday }}
       </div>
       <div class="col-auto">
-        NOME Lorem ipsum dolor
+        {{ ITEM.name }}
       </div>
     </div>
   </div>
