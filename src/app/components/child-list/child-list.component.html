@@ -18,14 +18,19 @@
       <h1 class="text-center text-child">Crianças</h1>
     </div>
   </div>
-  <hr>
-  <div class="container text-center" *ngFor="let ITEM of childList">
+  <div class="container text-center child" *ngFor="let ITEM of childList" >
     <div class="row align-items-start">
+      <div class="col-auto">
+        {{ ITEM.id }}
+      </div>
+      <div class="col-auto">
+        {{ ITEM.name }}
+      </div>
       <div class="col-auto">
         {{ ITEM.birthday }}
       </div>
       <div class="col-auto">
-        {{ ITEM.name }}
+        {{ ITEM.gender }}
       </div>
     </div>
   </div>
@@ -48,11 +53,27 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="mb-3">
+          <label for="txtName" class="form-label">Nome completo</label>
+          <input type="text" class="form-control" id="txtName" [(ngModel)]="newChild.name">
+        </div>
+        <div class="mb-3">
+          <label for="txtDate" class="form-label">Data de nascimento</label>
+          <input type="date" class="form-control" id="txtDate" [(ngModel)]="newChild.birthday">
+        </div>
+        <div class="mb-3">
+          <label for="txtDate" class="form-label">Gênero</label>
+          <select class="form-select" aria-label="Default select example" [(ngModel)]="newChild.gender">
+            <option selected>Abra este menu de seleção</option>
+            <option value="FEMININO">Feminino</option>
+            <option value="MASCULINO">Masculino</option>
+          </select>
+        </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="createNewChild()">Salvar</button>
       </div>
     </div>
   </div>

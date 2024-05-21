@@ -15,4 +15,10 @@ export class ChildListService {
   public getChildList(): Observable<Child[]>{
     return this.http.get<Child[]>(environment.apiUrl+"/children/listChildren");
   }
+
+  public createChild(child:Child): Observable<Child>{
+    return this.http.post<Child>(environment.apiUrl+"/children/createChild", child);
+  }
 }
+
+
