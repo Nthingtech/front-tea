@@ -18,23 +18,24 @@
       <h1 class="text-center text-child">Crianças</h1>
     </div>
   </div>
-  <div class="container text-center child" *ngFor="let ITEM of childList" >
-    <div class="row align-items-start">
-      <div class="col-auto">
+  <!--<div class="container text-center child" *ngFor="let ITEM of childList" > -->
+    <!--<div class="row lista align-items-start"> -->
+    <div class="row lista" *ngFor="let ITEM of childList">
+      <div class="col-3">
         {{ ITEM.id }}
       </div>
-      <div class="col-auto">
+      <div class="col-7">
         {{ ITEM.name }}
       </div>
-      <div class="col-auto">
+      <div class="col-3">
         {{ ITEM.birthday }}
       </div>
-      <div class="col-auto">
+      <div class="col-2">
         {{ ITEM.gender }}
       </div>
     </div>
-  </div>
-</div>
+  <!--</div>-->
+<!--</div>-->
 
 <!-- Button trigger modal -->
 <button type="button" id="newChild" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">

@@ -50,6 +50,7 @@ export class ChildListComponent {
     this.service.createChild(this.newChild).subscribe({
       next: () => {
         alert("Cadastrado com sucesso");
+        this.getAllChildList();
       },
       error: () => {
         alert("Erro ao cadastrar crinaça")
